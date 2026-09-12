@@ -1,0 +1,53 @@
+{
+  "name": "@violiate/code-inspection-core",
+  "version": "0.2.2",
+  "description": "Protocol-independent code inspection engine and contracts.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Violiate/code--inspection.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/Violiate/code--inspection#readme",
+  "bugs": {
+    "url": "https://github.com/Violiate/code--inspection/issues"
+  },
+  "keywords": [
+    "code-inspection",
+    "static-analysis",
+    "diagnostics",
+    "linting",
+    "mcp",
+    "lsp",
+    "multilingual"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "fast-xml-parser": "5.11.1",
+    "minimatch": "10.2.6",
+    "zod": "^4.5.4"
+  }
+}
